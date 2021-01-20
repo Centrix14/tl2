@@ -3,7 +3,7 @@
 #include <string.h>
 
 #include "list.h"
-#include "../st/st.h"
+#include "st.h/st.h"
 
 void free_data(list *lptr);
 

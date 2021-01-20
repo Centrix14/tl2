@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 #include "list.h"
-#include "../st/st.h"
+#include "st.h/st.h"
 
 int main() {
 	st_name("t1");

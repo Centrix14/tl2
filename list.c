@@ -15,7 +15,6 @@ list *list_init_node(list *parent) {
 	nptr->prev = parent;
 	nptr->next = NULL;
 	nptr->data = NULL;
-	nptr->dt = OT_FIGURE;
 
 	return nptr;
 }
@@ -38,8 +37,9 @@ void list_add_node(list *parent) {
 void list_free_list(list *node) {
 	if (node->next)
 		list_free_list(node->next);
-	list_free_node(node);
-}
+	if (node->prev)
+		list_free_node(node);
+}	
 
 void list_set_data(list *node, void *new_data) {
 	node->data = new_data;
